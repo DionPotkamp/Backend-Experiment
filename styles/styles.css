@@ -1,0 +1,495 @@
+/*
+	Algemeen
+*/
+body {
+	width:90%;
+	margin: 0;
+	color: white; 
+	font-size: 1.2vw;
+	font-family: CaviarDreams_Bold;
+	text-align: center;
+	background: #F1E9DA url("images/rome-road.jpg") no-repeat right top; 
+	background-size: 100%;
+	transition: all 0.7s cubic-bezier(.75,-0.44,.22,1.53);
+	overflow-x: hidden;
+	z-index: 0;
+}
+hr {
+	width: 100%;
+	margin-left: 0px;
+}
+.hrblog {
+	width: 70%;
+	margin: 1.5vw auto;
+}
+a {
+	text-decoration: none;
+}
+/*
+	Formulieren
+*/
+form {
+	position: relative;
+	z-index: 2;
+}
+input[type="password"], 
+input[type="email"], 
+input[type="text"] {
+	width: 100%;
+	height: 2.5vw;
+	margin-top: 0.5vw;
+	border: none;
+	border-bottom: 1px solid #6a6a6a;
+	border-radius: 5px;
+	background-color: transparent;
+	outline: none;
+	transition: all 0.15s linear;
+}
+input[type="password"]:hover, 
+input[type="email"]:hover, 
+input[type="text"]:hover {
+	border-bottom: 1px solid #e24343;
+}
+input[type="password"]:focus::placeholder, 
+input[type="email"]:focus::placeholder, 
+input[type="text"]:focus::placeholder {
+	color: aliceblue;
+	background-color: rgba(129, 166, 190, 0.35);
+}
+input[type="password"]::placeholder, 
+input[type="email"]::placeholder, 
+input[type="text"]::placeholder {
+	color: black;
+	font-size: 1.5vw;
+}
+input[type=button], 
+input[type=submit],
+.ownPosts {
+	width: 100%;
+	margin: 0.4vw 0vw;
+	padding: 0.4vw 0.1vw;
+	border: none;
+	border-bottom: 1px solid #6a6a6a;
+	border-radius: 5px;
+	box-sizing: border-box;
+	text-decoration: none;
+	color: aliceblue;
+	font-size: 1.4vw;
+	cursor: pointer;
+	background-color: rgba(129, 166, 190, 0.75);
+	transition: all 0.15s linear;
+}
+input[type=button]:active, 
+input[type=submit]:active {
+	transform: translateY(1px);
+	box-shadow: 0 1px rgba(88, 47, 47, 0.8);
+	background-color: rgba(129, 166, 190, 0.5);
+}
+#blogs input[type="text"], 
+textarea {
+	width: 70%;
+	height: 2.5vw;
+	margin-top: 0.5vw;
+	resize: vertical;
+	border: none;
+	border-bottom: 1px solid #6a6a6a;
+	border-radius: 5px;
+	box-sizing: border-box;
+	color: darkblue;
+	font-size: 1.5vw;
+	font-family: CaviarDreams;
+	outline: none;
+	background-color: transparent;
+	transition: all 0.15s linear;
+}
+#blogs textarea {
+	height: 10vw;
+}
+#blogs input[type="text"]:hover, 
+#blogs textarea:hover {
+	border-bottom: 1px solid #e24343;
+}
+#blogs input[type="text"]:focus, 
+#blogs textarea:focus {
+	color: black;
+	background-color: rgba(129, 166, 190, 0.15);
+}
+#blogs input[type="text"]::placeholder, 
+#blogs textarea::placeholder {
+	color: dimgray;
+	font-size: 1.5vw;
+	font-family: CaviarDreams_Bold;
+}
+#blogs input[type=button], 
+#blogs input[type=submit] {
+	width: 25%;
+}
+/*
+	index.html pagina opmaak
+*/
+.div{
+	position: relative;
+	width: 18%;
+	height: auto;
+	margin: 3vw 2vw;
+	padding: 15px;
+	border-radius: 5px;
+	background-color: rgba(129, 166, 190, 0.75);
+	background: url("images/logo2.png") no-repeat local 80% 50%; 
+	background-size: 100%;
+	z-index: 3;
+}
+.registreren {
+	width: 25%;
+	height: auto;
+}
+.pageTitle {
+	position: fixed;
+	display: block;
+	margin: 0;
+	bottom: 0;
+	left: 1vw;
+	font-size: 14vw;
+	font-family: CaviarDreams_Bold;
+	text-shadow: 0px 0px 5px black;	
+	transition: all 0.15s linear;
+	z-index: 10;
+}
+.boxtitle {
+	font-size: 1.5vw;
+	text-shadow: 0px 0px 5px black;	
+}
+.reg {
+	text-shadow: 0px 0px 5px black;	
+}
+.inlogBody {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0);
+	transition: all 1.5s cubic-bezier(1,.37,.76,.91);
+	z-index: 1;
+}
+.pageTitle::after {
+	content: "ITALIA";
+	position: relative;
+	right: 34.45vw;
+	bottom: 4.4vw;
+	font-size: 2.8vw;
+	color: rgba(255, 255, 255, 0.75);
+	text-shadow: none;	
+	animation: shad 3.5s infinite both 1s;
+}
+@keyframes shad {
+	50%{color: rgb(255, 255, 255);text-shadow: 0px 0px 7px black;}
+}
+/*
+	header opmaak profielpagina
+*/
+header {
+	position: fixed;
+	display: block;
+	width: 100%;
+	height: 10vw;
+	margin: 0;
+	border-radius: 0 0 10px 10px;
+	box-shadow: 0 7px 4px rgba(136, 136, 136, 0.75);
+	color: white; 
+	background: rgb(234, 234, 234) url("images/rome-road.jpg") no-repeat center; 
+	background-size: 100%;
+	transition: all 0.5s ease-in-out 0.5s;
+	z-index: 99;
+}
+header:hover {
+	height: 90%;
+}
+header:hover  .profielfoto,
+header:hover  #profielFoto,
+header:hover  .pfnaam,
+header:hover  .forumNaam{
+	opacity: 0;
+}
+.profielfoto {
+	position: fixed;
+	display: block;
+	width: 7vw;
+	height: 7vw;
+	left: 1vw;
+	top: 1vw;
+	border-bottom: 0.5vw solid black;
+	border-radius: 50%;
+	background: rgba(204, 204, 204, 0.65);
+	transition: all 0.5s ease-in-out 0.4s;
+	overflow: hidden;
+	z-index: 10;
+}
+#profielFoto {
+	position: relative;
+	width: 90%;
+	transition: all 0.5s ease-in-out 0.4s;
+	z-index: 9;
+}
+.pfnaam {
+	position: fixed;
+	display: block;
+	left: 9vw;
+	top: 4vw;
+	text-shadow: 0px 0px 5px black;	
+	transition: all 0.5s ease-in-out 0.4s;
+}
+#altfoto {
+	position: fixed;
+	display: block;
+	width: 4vw;
+	left: 2.5vw;
+	top: 1.6vw;
+	transition: all 0.5s ease-in-out;
+}
+.welkomtext {
+	width: 70%;
+	margin: auto;
+	font-size: 1.3vw;
+}
+/*
+	Nav opmaak
+*/
+nav {
+	position: fixed;
+	display: block;
+	width: 100%;
+	height: 3.6vw;
+	margin: 0;
+	padding-top: 1.2vw;
+	top: 9vw;
+	border-radius: 0 0 10px 10px;
+	box-shadow: 0 7px 4px rgba(136, 136, 136, 0.75);
+	background: #BED8D4;
+	transition: all 0.5s ease-in-out;
+	z-index: 2;
+}
+nav:hover, header:hover {
+	box-shadow: 0 5px 6px rgba(136, 136, 136, 1);
+}
+.forumNaam {
+	position: absolute;
+	display: block;
+	float: right;
+	width: 20%;
+	height: 4vw;
+	margin: 0;
+	top: 2.4vw;
+	right: 14vw;
+	font-size: 1.2vw;
+	font-family: CaviarDreams_BoldItalic;
+	cursor: pointer;
+	white-space: nowrap;
+  	text-overflow: ellipsis;
+  	overflow: hidden;
+	transition: all 0.5s ease-in-out 0.4s;
+}
+.forumNaam:hover::after {
+	content: "Klik mij";
+	position: absolute;
+    left: 0.3vw;
+    top: 2.3vw;
+	color: transparent;
+	animation: up 2s both;
+}
+@keyframes up {
+	30%{color: darkblue;transform: translateY(-2vw);}
+	100%{transform: translateY(-1vw);}
+}
+.groet {
+	position: relative;
+	display: block;
+	margin: 0 auto;
+	font-size: 4vw;
+	text-shadow: 0px 0px 5px black;
+}
+.uitlogknop {
+	position: absolute;
+	display: block;
+	float: right;
+	width: 13%;
+	right: 1vw;
+}
+.forumknop {
+	position: absolute;
+	display: block;
+	float: left;
+	width: 12%;
+	left: 1vw;
+}
+.nieuwtopic {
+	position: absolute;
+	display: block;
+	float: left;
+	width: 12%;
+	left: 14vw;
+}
+/*
+	Waar de posts in komen
+*/
+main {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding-top: 1vw;
+	padding-bottom: 2vw;
+	top: 8vw;
+	color: black;
+	background: #F1E9DA;
+	z-index: 1;
+}
+.postsBG {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	top: 0;
+	left: 0;
+	background-color: #F1E9DA;
+	z-index: 1;
+}
+.done {
+	text-decoration: line-through;
+}
+.doneAfter {
+	color: darkgreen;
+}
+.ownPosts {
+	position: relative;
+	display: block;
+	width: 30vw;
+	height: 2.3vw;
+	margin: auto;
+	cursor: pointer;
+}
+#OwnPostsShow {
+	display: block;
+}
+/*
+	Articles waar de posts ingezet worden
+*/
+article {
+	width: 70%;
+	height: auto;
+	margin: 0.5vw auto;
+	padding-bottom: 1vw;
+	top: 0;
+	background: rgba(255, 255, 255, 0.5);
+	text-align: left;
+}
+article:first-of-type {
+	border-top: 2px solid rgba(0, 0, 0, 0.5);
+	border-radius: 5px 5px 0 0;
+}
+article:last-of-type {
+	border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+	border-radius: 0 0 5px 5px;
+}
+.postsA {
+	animation: postsInladen 1.5s cubic-bezier(.26,.28,0,.99) 0.45s both;
+}
+@keyframes postsInladen {
+	0%		{opacity:0;transform: translateY(1vw);}
+	100%	{opacity:1;transform: translateY(0);}
+}
+.naam {
+	margin: 0.5vw 1vw;
+	font-size: 3vw;
+}
+.naam:first-letter {
+    text-transform: uppercase;
+}
+.mededeling{
+	color: darkgray;
+	font-size: 1.2vw;
+}
+.time {
+	margin: 0;
+	color: gray;
+	font-size: 0.8vw;
+	cursor: pointer;
+}
+.poster {
+	margin: 0 0 0 0.7vw;
+	color: gray;
+	font-size: 0.8vw;
+}
+.naam, .time, .poster {
+	font-family: CaviarDreams_Italic;
+}
+.profielFoto {
+	position: absolute;
+	display: block;
+	width: 5vw;
+	height: 5vw;
+	left: 9vw;
+	border-bottom: 0.5vw solid black;
+	border-radius: 50%;
+	background: rgba(204, 204, 204, 0.65) url("images/logoclear.png") no-repeat;
+	background-size: 55%;
+	background-position: center; 
+	overflow: hidden;
+	z-index: 10;
+}
+.pfFoto {
+	position: relative;
+	width: 90%;
+	z-index: 9;
+}
+.devider {
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 1px;
+	margin: 0;
+	padding: 0;
+	bottom: 0.5vw;
+	box-shadow: 0 7px 4px rgba(136, 136, 136, 0.75);
+}
+.text {
+	margin: 0 1vw;
+	font-weight: 450;
+	font-family: CaviarDreams;
+	overflow: hidden;
+}
+/*Errors registreren.php*/
+.errorReg {
+	margin-top: 4vw;
+	text-align: center; 
+}
+/* 
+	Uitlogscherm
+*/
+.uitlogM {
+	top: 15vw;
+}
+.uitlogA {
+	text-align: center;
+}
+/*
+	Fonts
+*/
+@font-face {
+	font-family: CaviarDreams;
+	src: url(font/CaviarDreams.ttf);
+}
+@font-face {
+	font-family: CaviarDreams_Bold;
+	src: url(font/CaviarDreams_Bold.ttf);
+}
+@font-face {
+	font-family: CaviarDreams_Italic;
+	src: url(font/CaviarDreams_Italic.ttf);
+}
+@font-face {
+	font-family: CaviarDreams_BoldItalic;
+	src: url(font/CaviarDreams_BoldItalic.ttf);
+}

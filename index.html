@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="styles/styles.css">
+		<title>Inloggen</title>
+		<!--
+			auteur: Dion Potkamp
+			datum: 07-01-2019
+		-->
+	</head>
+	<body>
+		<p class="pageTitle">ROME:</p>
+		<div class="logobg">
+			<div class="div">
+				<p>
+					<span class="boxtitle">Log in of registreer</span>
+				</p>
+				<small>
+					admin@forumrome.nl : Banaan01 <br>
+					test@tester.nu : 123abc <br>
+				</small>
+				<form name="inloggen" method="post" action="html/inloggen.php" enctype="multipart/form-data">
+					<input required type="email" id="email" name="email" placeholder="E-mail" onfocus="getElementById('bg').style.background = 'rgba(0, 0, 0, 0.4)'">
+					<br>
+					<input required type="password" id="password" name="password" placeholder="Wachtwoord" onfocus="getElementById('bg').style.background = 'rgba(0, 0, 0, 0.4)'">
+					<br>
+					<input type="submit" value="Inloggen">
+					<hr>
+					<span class="reg">Nog geen account?</span>
+					<br>
+					<a href="html/registreren.html">
+						<input type="button" value="Registreren">
+					</a>
+				</form>
+			</div>
+		</div>
+		<div class="inlogBody" id="bg"></div>
+	</body>
+</html>

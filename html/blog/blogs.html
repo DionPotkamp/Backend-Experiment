@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="../../styles/styles.css">
+		<title>Forum ROME:</title>
+		<!--
+			auteur: Dion Potkamp
+			datum: 07-01-2019
+		-->
+	</head>
+	<body>
+		<div class="postsBG"></div>
+		<header>
+			<h1 class="groet">
+				Forum ROME:
+			</h1>			
+			<img id="altfoto" src="../../styles/images/logoclear.png">
+		</header>
+		<nav>
+			<a href="../uitloggen.php" class="uitlogknop">
+				<input type="button" name="uitloggen" value="Uitloggen">
+			</a>
+			<a href="blogshome.php" class="forumknop">
+				<input type="button" name="terug" value="Terug">
+			</a>
+		</nav>
+		<main>
+			<br><br><br>
+			<h1>
+				Hallo!
+			</h1>
+			<p class="welkomtext">
+				Maak een nieuw forum-topic op het forum ROME:.
+			</p>
+			
+			<form name="nieuwtopic" id="blogs" method="post" action="blogs.php" enctype="multipart/form-data">
+				<input required autofocus type="text" id="titel" name="titel" maxlength="15" placeholder="Title">
+				<br>
+				<textarea required id="topic" name="topic" placeholder="Type hier je post..."></textarea>
+				<hr class="hrblog">
+				<input type="submit" name="submit" value="Posten">
+				<a href="blogshome.php">
+					<input type="button" name="anuleren" value="Anuleren">
+				</a>
+			</form>
+			
+		</main>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="../styles/styles.css">
+		<title>Registreren</title>
+		<!--
+			auteur: Dion Potkamp
+			datum: 07-01-2019
+		-->
+	</head>
+	<body>
+		<p class="pageTitle">ROME:</p>
+		<div class="div registreren">
+			<P>
+				<span class="boxtitle">Registreren</span>
+			</P>
+			<form name="registreren" method="post" action="registreren.php" enctype="multipart/form-data">
+				<input required type="text" id="naam" name="naam" placeholder="Naam" onfocus="getElementById('bg').style.background = 'rgba(0, 0, 0, 0.4)'">
+				<br>
+				<input required type="email" id="email" name="email" placeholder="E-mail" onfocus="getElementById('bg').style.background = 'rgba(0, 0, 0, 0.4)'">
+				<br>
+				<input required type="password" id="password" name="password" placeholder="Wachtwoord" onfocus="getElementById('bg').style.background = 'rgba(0, 0, 0, 0.4)'">
+				<br>
+				Upload je foto:
+				<br><br>
+				<input type="file" name="foto" id="foto" onfocus="getElementById('bg').style.background = 'rgba(0, 0, 0, 0.4)'">
+				<br>
+				<hr>
+				<input type="submit" name="submit" value="Registreren">
+				<a href="../index.html">
+					<input type="button" name="anuleren" value="Anuleren">
+				</a>
+			</form>
+		</div>
+		<div class="inlogBody" id="bg"></div>
+	</body>
+</html>
